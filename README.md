@@ -37,10 +37,7 @@ Feel free to contribute to this repository by:
 ### License
 
 This project is for educational purposes and is available for anyone to learn and improve their Web Engineering skills.
-"""
+### "With courage in my heart, hope in my code, and energy in every line I write, I create not just for myself, but to uplift and inspire those around me."
+#### — Tawfia Yeasmin, 2024
 
-# Save the README.md file
-readme_file_path = "/mnt/data/README.md"
-with open(readme_file_path, "w") as file:
- file.write(readme_content)
-readme_file_path
+
