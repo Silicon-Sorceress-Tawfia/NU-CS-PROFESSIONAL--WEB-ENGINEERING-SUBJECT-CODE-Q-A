@@ -22,3 +22,25 @@ This repository contains all the practical code and examples for **Web Engineeri
 ## Usage
 
 1. Clone the repository: https://github.com/Silicon-Sorceress-Tawfia/NU-CS-PROFESSIONAL--WEB-ENGINEERING-SUBJECT-CODE-Q-A.git
+2. Open any file in your preferred code editor (e.g., VS Code).
+3. Explore, practice, and modify the code as needed.
+
+## Contribution
+
+Feel free to contribute to this repository by:
+- Adding new questions and answers.
+- Suggesting improvements.
+- Reporting any issues.
+
+---
+
+### License
+
+This project is for educational purposes and is available for anyone to learn and improve their Web Engineering skills.
+"""
+
+# Save the README.md file
+readme_file_path = "/mnt/data/README.md"
+with open(readme_file_path, "w") as file:
+ file.write(readme_content)
+readme_file_path
