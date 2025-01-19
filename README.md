@@ -38,6 +38,6 @@ Feel free to contribute to this repository by:
 
 This project is for educational purposes and is available for anyone to learn and improve their Web Engineering skills.
 ### "With courage in my heart, hope in my code, and energy in every line I write, I create not just for myself, but to uplift and inspire those around me."
-#### — Tawfia Yeasmin, 2024
+#### — Tawfia- Yeasmin, 2024
 
 
