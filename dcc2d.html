@@ -5,12 +5,12 @@ Write down the CSS and HTML code to design the following menu:
 ---------------------------------
 | INDEX   | TYPE      | ADDRESS |
 ---------------------------------
-|    1    | TYPE-01   |   ---   |
----------------------------------
-|    2    | TYPE-02   |   ---   |
----------------------------------
-|    3    | TYPE-03   |   ---   |
----------------------------------
+         | TYPE-01   |         
+
+         | TYPE-02   |         
+
+         | TYPE-03   |       
+
 -->
 
 <!DOCTYPE html>
@@ -20,69 +20,49 @@ Write down the CSS and HTML code to design the following menu:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Table</title>
     <style>
-        /* 
-        CSS Styling:
-        
-        table {}:
-        - Centers the table and adjusts its width for a balanced layout.
-        - Ensures borders between rows and columns collapse into a single line.
-        */
+        /* Basic styling for the table */
         table {
-            width: 50%; /* Set the width of the table to 50% of the page */
-            border-collapse: collapse; /* Remove space between table borders */
-            margin: 20px auto; /* Center the table horizontally on the page */
-            text-align: centre; /* Align text to the center of each cell */
+            width: 50%; /* Set table width */
+            border-collapse: collapse; /* Merge borders into a single line */
+            margin: 20px auto; /* Center the table */
         }
-
-        /* 
-        th, td {}:
-        - Adds borders and padding to make the content more readable.
-        */
         th, td {
-            border: 1px solid black; /* Add a black border around each cell */
-            padding: 8px; /* Add padding inside cells for better spacing */
+            border: 1px solid black; /* Add borders to cells */
+            padding: 8px; /* Add spacing inside cells */
+            text-align: left; /* Align text to the left */
         }
-
-        /* 
-        th {}:
-        - Highlights headers with a light gray background for better visibility.
-        */
         th {
             background-color: #f2f2f2; /* Light gray background for headers */
+        }
+        /* Make INDEX and ADDRESS cells appear blank with no visible border */
+        td.index, td.address {
+            border: none; /* Remove borders for blank cells */
         }
     </style>
 </head>
 <body>
-    <!-- 
-    HTML Structure:
-    
-    <table>: Creates a table to structure the menu.
-    <tr>: Defines table rows.
-    <th>: Represents table headers (e.g., INDEX, TYPE, ADDRESS).
-    <td>: Contains table data for each cell.
-    -->
     <table>
-        <!-- Header row -->
+        <!-- Table headers -->
         <tr>
-            <th>INDEX</th> <!-- Header for the INDEX column -->
-            <th>TYPE</th> <!-- Header for the TYPE column -->
-            <th>ADDRESS</th> <!-- Header for the ADDRESS column -->
+            <th>INDEX</th>
+            <th>TYPE</th>
+            <th>ADDRESS</th>
         </tr>
-        <!-- Data rows -->
+        <!-- Table rows -->
         <tr>
-            <td>1</td> <!-- Row value for INDEX -->
-            <td>TYPE-01</td> <!-- Row value for TYPE -->
-            <td>---</td> <!-- Placeholder for ADDRESS -->
-        </tr>
-        <tr>
-            <td>2</td> <!-- Row value for INDEX -->
-            <td>TYPE-02</td> <!-- Row value for TYPE -->
-            <td>---</td> <!-- Placeholder for ADDRESS -->
+            <td class="index"></td> <!-- No visible border for INDEX -->
+            <td>TYPE-01</td>
+            <td class="address"></td> <!-- No visible border for ADDRESS -->
         </tr>
         <tr>
-            <td>3</td> <!-- Row value for INDEX -->
-            <td>TYPE-03</td> <!-- Row value for TYPE -->
-            <td>---</td> <!-- Placeholder for ADDRESS -->
+            <td class="index"></td> <!-- No visible border for INDEX -->
+            <td>TYPE-02</td>
+            <td class="address"></td> <!-- No visible border for ADDRESS -->
+        </tr>
+        <tr>
+            <td class="index"></td> <!-- No visible border for INDEX -->
+            <td>TYPE-03</td>
+            <td class="address"></td> <!-- No visible border for ADDRESS -->
         </tr>
     </table>
 </body>
@@ -92,25 +72,26 @@ Write down the CSS and HTML code to design the following menu:
 Explanation of the Code:
 
 HTML Structure:
-- <!DOCTYPE html>: Specifies the document type to be HTML5.
-- <head>: Contains metadata, including the CSS styles defined inside <style>.
-- <body>: Contains the visible content, which is the table.
-- <table>: Creates a table to structure the menu.
-- <tr>: Defines table rows.
-- <th>: Represents table headers (e.g., INDEX, TYPE, ADDRESS).
-- <td>: Contains table data for each cell.
+- <!DOCTYPE html>: Declares the document type as HTML5.
+- <head>: Contains metadata and CSS styling.
+- <body>: Contains the table structure.
+- <table>: Creates the table layout.
+- <tr>: Defines each row in the table.
+- <th>: Represents column headers (INDEX, TYPE, ADDRESS).
+- <td>: Represents table data. 
+  - "class='index'" and "class='address'" are used for INDEX and ADDRESS cells to make them appear blank.
 
 CSS Styling:
-- table {}:
-  - Centers the table and adjusts its width for a balanced layout.
-  - Ensures borders between rows and columns collapse into a single line.
-- th, td {}:
-  - Adds borders and padding to make the content more readable.
-- th {}:
-  - Highlights headers with a light gray background for better visibility.
+- table:
+  - Centers the table and sets the width to 50%.
+  - Collapses borders for a cleaner design.
+- th, td:
+  - Adds borders, padding, and aligns text.
+- td.index and td.address:
+  - Removes visible borders for INDEX and ADDRESS cells to make them look blank.
 
 Design Output:
-- The table is neatly structured with headers at the top and rows below it.
-- The text is centered, and the borders are clearly visible for an organized look.
-- The light gray header distinguishes the column names.
+- A table where "INDEX" and "ADDRESS" have no visible boundaries.
+- Only "TYPE" has clear column boundaries and contains data.
 -->
+
