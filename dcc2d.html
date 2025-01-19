@@ -1,0 +1,116 @@
+<!-- 
+Question:
+Write down the CSS and HTML code to design the following menu:
+
+---------------------------------
+| INDEX   | TYPE      | ADDRESS |
+---------------------------------
+|    1    | TYPE-01   |   ---   |
+---------------------------------
+|    2    | TYPE-02   |   ---   |
+---------------------------------
+|    3    | TYPE-03   |   ---   |
+---------------------------------
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Table</title>
+    <style>
+        /* 
+        CSS Styling:
+        
+        table {}:
+        - Centers the table and adjusts its width for a balanced layout.
+        - Ensures borders between rows and columns collapse into a single line.
+        */
+        table {
+            width: 50%; /* Set the width of the table to 50% of the page */
+            border-collapse: collapse; /* Remove space between table borders */
+            margin: 20px auto; /* Center the table horizontally on the page */
+            text-align: center; /* Align text to the center of each cell */
+        }
+
+        /* 
+        th, td {}:
+        - Adds borders and padding to make the content more readable.
+        */
+        th, td {
+            border: 1px solid black; /* Add a black border around each cell */
+            padding: 8px; /* Add padding inside cells for better spacing */
+        }
+
+        /* 
+        th {}:
+        - Highlights headers with a light gray background for better visibility.
+        */
+        th {
+            background-color: #f2f2f2; /* Light gray background for headers */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    HTML Structure:
+    
+    <table>: Creates a table to structure the menu.
+    <tr>: Defines table rows.
+    <th>: Represents table headers (e.g., INDEX, TYPE, ADDRESS).
+    <td>: Contains table data for each cell.
+    -->
+    <table>
+        <!-- Header row -->
+        <tr>
+            <th>INDEX</th> <!-- Header for the INDEX column -->
+            <th>TYPE</th> <!-- Header for the TYPE column -->
+            <th>ADDRESS</th> <!-- Header for the ADDRESS column -->
+        </tr>
+        <!-- Data rows -->
+        <tr>
+            <td>1</td> <!-- Row value for INDEX -->
+            <td>TYPE-01</td> <!-- Row value for TYPE -->
+            <td>---</td> <!-- Placeholder for ADDRESS -->
+        </tr>
+        <tr>
+            <td>2</td> <!-- Row value for INDEX -->
+            <td>TYPE-02</td> <!-- Row value for TYPE -->
+            <td>---</td> <!-- Placeholder for ADDRESS -->
+        </tr>
+        <tr>
+            <td>3</td> <!-- Row value for INDEX -->
+            <td>TYPE-03</td> <!-- Row value for TYPE -->
+            <td>---</td> <!-- Placeholder for ADDRESS -->
+        </tr>
+    </table>
+</body>
+</html>
+
+<!-- 
+Explanation of the Code:
+
+HTML Structure:
+- <!DOCTYPE html>: Specifies the document type to be HTML5.
+- <head>: Contains metadata, including the CSS styles defined inside <style>.
+- <body>: Contains the visible content, which is the table.
+- <table>: Creates a table to structure the menu.
+- <tr>: Defines table rows.
+- <th>: Represents table headers (e.g., INDEX, TYPE, ADDRESS).
+- <td>: Contains table data for each cell.
+
+CSS Styling:
+- table {}:
+  - Centers the table and adjusts its width for a balanced layout.
+  - Ensures borders between rows and columns collapse into a single line.
+- th, td {}:
+  - Adds borders and padding to make the content more readable.
+- th {}:
+  - Highlights headers with a light gray background for better visibility.
+
+Design Output:
+- The table is neatly structured with headers at the top and rows below it.
+- The text is centered, and the borders are clearly visible for an organized look.
+- The light gray header distinguishes the column names.
+-->
