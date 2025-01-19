@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Design</title>
+    <style>
+        /* Basic styling for the table */
+        table {
+            width: 60%; /* Set table width */
+            border-collapse: collapse; /* Merge table borders into a single line */
+            margin: 20px auto; /* Center the table */
+        }
+        th, td {
+            border: 1px solid black; /* Add borders to all cells */
+            padding: 8px; /* Add spacing inside cells */
+            text-align: left; /* Align text to the left */
+        }
+        th {
+            background-color: #f2f2f2; /* Light gray background for headers */
+        }
+        /* Remove borders for the Home and Contact columns */
+        td.home, td.contact {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!-- Table headers -->
+        <tr>
+            <th>Home</th>
+            <th>Service</th>
+            <th>Contact</th>
+        </tr>
+        <!-- Subcategories under Service -->
+        <tr>
+            <td class="home"></td> <!-- No visible border for Home -->
+            <td>Software</td>
+            <td class="contact"></td> <!-- No visible border for Contact -->
+        </tr>
+        <tr>
+            <td class="home"></td> <!-- No visible border for Home -->
+            <td>Web</td>
+            <td class="contact"></td> <!-- No visible border for Contact -->
+        </tr>
+        <tr>
+            <td class="home"></td> <!-- No visible border for Home -->
+            <td>Networking</td>
+            <td class="contact"></td> <!-- No visible border for Contact -->
+        </tr>
+    </table>
+</body>
+</html>
+
