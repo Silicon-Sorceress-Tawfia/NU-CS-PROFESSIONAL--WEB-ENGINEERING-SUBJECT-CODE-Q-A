@@ -1,50 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Grades</title>
+    <style>
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        td[colspan="2"] {
+            text-align: right;
+        }
+    </style>
+</head>
 <body>
 
-<h2>GPA Calculator</h2>
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Grade</th>
+        </tr>
+        <tr>
+            <td>5120</td>
+            <td>A+</td>
+        </tr>
+        <tr>
+            <td>5121</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>5122</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td colspan="2" id="gpa">GPA: </td>
+        </tr>
+    </table>
 
-<table>
-  <tr>
-    <th>Course</th>
-    <th>Grade</th>
-  </tr>
-  <tr>
-    <td>5120</td>
-    <td><input type="text" id="grade1" value="A+"></td>
-  </tr>
-  <tr>
-    <td>5121</td>
-    <td><input type="text" id="grade2" value="A"></td>
-  </tr>
-  <tr>
-    <td>5122</td>
-    <td><input type="text" id="grade3" value="B"></td>
-  </tr>
-</table>
+    <script>
+        // Define grade points for each grade
+        const gradePoints = {
+            'A+': 4.0,
+            'A': 4.0,
+            'B': 3.0,
+            'C': 2.0,
+            'D': 1.0,
+            'F': 0.0
+        };
 
-<button onclick="calculateGPA()">Calculate GPA</button>
+        // Grades in the table
+        const grades = ['A+', 'A', 'B'];
 
-<p id="gpaResult"></p>
+        // Function to calculate GPA
+        function calculateGPA() {
+            let totalPoints = 0;
+            let totalCourses = grades.length;
 
-<script>
-function calculateGPA() {
-  var grade1 = document.getElementById("grade1").value;
-  var grade2 = document.getElementById("grade2").value;
-  var grade3 = document.getElementById("grade3").value;
-  
-  var points = 0;
+            // Calculate the total grade points
+            for (let grade of grades) {
+                totalPoints += gradePoints[grade];
+            }
 
-  // Convert grades to points
-  if (grade1 == "A+") points += 4.5;
-  if (grade2 == "A") points += 4;
-  if (grade3 == "B") points += 3;
+            // Calculate GPA and display it in the table
+            let gpa = totalPoints / totalCourses;
+            document.getElementById('gpa').innerText = 'GPA: ' + gpa.toFixed(2);
+        }
 
-  var gpa = points / 3;
-  document.getElementById("gpaResult").innerHTML = "GPA: " + gpa.toFixed(2);
-}
-</script>
+        // Call the function to calculate GPA when the page loads
+        window.onload = calculateGPA;
+    </script>
 
 </body>
 </html>
-
